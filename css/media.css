@@ -219,7 +219,7 @@
 @media only screen and (max-width:500px) {
     @media (hover: hover) {
         #introduce_section .section_listbox>.icon_area:hover {
-            background-color: transparent;
+            background-color: #fff;
             color: #000;
         }
     }
