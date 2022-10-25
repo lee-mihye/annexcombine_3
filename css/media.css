@@ -142,8 +142,6 @@
 
 
 
-
-
 @media only screen and (max-width:900px) {
     /* br태그 넣기 */
     .br_block {display: block;}
@@ -175,14 +173,26 @@
     {margin-top:60px;}
 
 
-    /* introduce.html.html */
+    /************* introduce.html.html *************/
     .introduce_wrap #introduce_section{background-color: #fff;}
     .introduce_wrap .section_listbox>div{box-shadow: 3px 3px 10px 1px rgb(0, 0, 0, 0.1);}
 
 
-    /* center.html */ 
+
+
+    /************ service_Intro.html ************/
+    /* 97개 플랫폼 */
+    #le-Table-1 th, #le-Table-1 td { padding: 10px;}
+
+
+
+
+
+    /************* center.html *************/ 
     .map_wrap{display: unset;}
     .map_img{width:100%; margin-right: 40px; margin-bottom: 20px;}
+
+
 
     /************ service.html ************/
     /* 2. 장점 */
@@ -213,6 +223,18 @@
 
 
 
+
+
+
+
+
+@media only screen and (max-width:625px) {
+    /************ service_Intro.html ************/
+    /* 97개 플랫폼 */
+    /* 쇼핑몰리스트 전체 테이블 */
+    #le-Table-1 {font-size: 2vw;}
+    #le-Table-1 th, #le-Table-1 td { padding: 0.5vw;}
+}
 
 
 
@@ -378,7 +400,11 @@
 
 
     /************ 서브페이지 공통영역 ************/
-    .introduce_wrap .section_area .section_title p, .service_wrap .section_area .section_title p{font-size: 4.4vw;}
+    .introduce_wrap .section_area .section_title p,
+    .service_wrap .section_area .section_title p,
+    .brand_wrap .section_area .section_title p
+    {font-size: 4.4vw;}
+
     #service_section .icon_txt{padding:8%;}
 
 
@@ -396,8 +422,16 @@
     .service_Intro_wrap .service_Intro_main .section_area{padding: 15% 0 0;}
     .service_Intro_main .section_area .section_title .sub{font-size: 5.5vw;}
 
-    
- 
+    /* 97개 플랫폼 */
+    /* 체크박스 테이블 */
+    #Checkbox{margin:0 auto 5%;}
+    #Checkbox td{font-size: 4vw; padding: 3vw;}
+    /* 검색창 */
+    .search_box{text-align: center;}
+
+
+
+
 
    /************ center.html ************/ 
     .center_wrap .section_area{padding:15% 0;}

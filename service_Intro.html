@@ -153,24 +153,270 @@
 
         <!--회사소개 메인 -->
         <div class="service_Intro_main">
-            <div class="section_area">
+            <div class="section_area" data-aos="fade-up" data-aos-offset="200" data-aos-duration="700">
                 <!-- 타이틀 텍스트 -->
-                <div class="section_title" data-aos="fade-up" data-aos-offset="200" data-aos-duration="700">
+                <div class="section_title">
                     <div class="h3_box">
                         <h3>서비스소개</h3>
                     </div>
                     <h2>97개 플랫폼과 자동 주문수집 오토 시스템<br class="br_block"></h2>
-
-                    <p>요청사항 : 97개 플랫폼 리스트 보여주기</p>
                 </div>
 
-                <!-- 이미지 -->
-                <div class="section_listbox" data-aos="zoom-in" data-aos-offset="150" data-aos-duration="700"
-                    data-aos-delay="50">
-                    <div style="background-color:rgba(0, 0, 0, 0.274); padding: 18vw;">작업중</div>
+
+                <div class="platform_section">
+                    
+                    <!--  Checkboxes -->
+                    <table id="Checkbox">
+                        <tr>
+                            <td>
+                                <input type='checkbox' onclick='return filter_type_Total(this);' name='filter' id="all" value="전체" checked />
+                                <label for="all"><span></span>전체</label>     
+                            </td>
+                            <td>
+                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="openmarket" value="오픈마켓" checked />
+                                <label for="openmarket"><span></span>오픈마켓</label> 
+                            </td>
+                            <td>
+                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="social" value="소셜" checked />
+                                <label for="social"><span></span>소셜</label> 
+                            </td>
+                            <td>
+                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="general" value="종합몰" checked />
+                                <label for="general"><span></span>종합몰</label> 
+                            </td>
+                            <td>
+                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="specialty" value="전문몰" checked />
+                                <label for="specialty"><span></span>전문몰</label> 
+                            </td>
+                            <td>
+                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="HomeShopping" value="홈쇼핑" checked />
+                                <label for="HomeShopping"><span></span>홈쇼핑</label> 
+                            </td>
+                            <td>
+                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="welfare" value="복지몰" checked />
+                                <label for="welfare"><span></span>복지몰</label> 
+                            </td>
+                            <td>
+                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="overseas" value="해외쇼핑몰" checked />
+                                <label for="overseas"><span></span>해외쇼핑몰</label> 
+                            </td>
+                        </tr>
+                    </table>
+                    <!--  Table -->
+
+                    <!--  Search Box -->
+                    <div class="search_box">
+                        <input type="text" id="le-Input-1" onkeyup="myFunction()" placeholder="쇼핑몰 이름 검색"
+                            title="Type in a location" style=" display:inline">
+                    </div>
+
+
+                    <table id="le-Table-1">
+                        <!--  Table Header -->
+                        <thead>
+                            <tr class="header">
+                                <!--테이블 제목줄-->
+                                <th onclick="sortTable(0)">형태</th>
+                                <th onclick="sortTable(1)">쇼핑몰</th>
+                                <th onclick="sortTable(2)">쇼핑몰명</th>
+                                <th onclick="sortTable(3)">상품등록</th>
+                                <th onclick="sortTable(4)">상품수정</th>
+                                <th onclick="sortTable(5)">상품품절</th>
+                                <th onclick="sortTable(6)">주문수집</th>
+                                <th onclick="sortTable(7)">송장전송</th>
+                                <th onclick="sortTable(8)">고객문의</th>
+                                <th onclick="sortTable(9)">정산수집</th>
+                            </tr>
+                        </thead>
+                        <!--  Table Body / Rows -->
+                        <tbody>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/smartstore.png" alt="스마트스토어"></td>
+                                <td>스마트스토어</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/auction.png" alt="옥션"></td>
+                                <td>옥션</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/11st.png" alt="11번가"></td>
+                                <td>11번가</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/gmarket.png" alt="지마켓"></td>
+                                <td>지마켓</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/interpark.png" alt="인터파크"></td>
+                                <td>인터파크</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/coupang.png" alt="쿠팡"></td>
+                                <td>쿠팡</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>소셜</td>
+                                <td><img src="images/mall_logo/tmon.png" alt="티몬"></td>
+                                <td>티몬</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/cjonestyle.png" alt="CJ온스타일"></td>
+                                <td>CJ온스타일</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/hmall.png" alt="현대H몰"></td>
+                                <td>현대H몰</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/nshomeshop.png" alt="NS홈쇼핑"></td>
+                                <td>NS홈쇼핑</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/brandi.png" alt="브랜디"></td>
+                                <td>브랜디</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/musinsa.png" alt="무신사"></td>
+                                <td>무신사</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/halfclub.png" alt="하프클럽"></td>
+                                <td>하프클럽</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/ssg.png" alt="SSG"></td>
+                                <td>SSG</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>해외쇼핑몰</td>
+                                <td><img src="images/mall_logo/ebay.png" alt="ebay"></td>
+                                <td>ebay</td>
+                                <td title=상품등록>O</td>
+                                <td title=상품수정>O</td>
+                                <td title=상품품절>X</td>
+                                <td title=주문수집>O</td>
+                                <td title=송장전송>O</td>
+                                <td title=고객문의>O</td>
+                                <td title=정산수집>O</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+
+
 
         <!-- 아컴서비스 이용절차 -->
         <section id="service_Intro_section">
@@ -248,7 +494,7 @@
                 <div class="footer_info">
                     <p>(주)아넥스컴바인</p>
                     <span class="space">|</span>
-                    <p>대표 : 신두호</p>
+                    <p>대표 : 천주현</p>
                     <span class="space">|</span>
                     <p>사업자등록번호 : 683-81-02480</p>
                     <span class="space">|</span>
@@ -263,6 +509,176 @@
 
     </div>
     <!-- //wrap -->
+
+
+
+
+    <script>
+        /* Sort function */
+        function sortTable(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById("le-Table-1");
+            switching = true;
+            //Set the sorting direction to ascending:
+            dir = "asc";
+            /*Make a loop that will continue until
+            no switching has been done:*/
+            while (switching) {
+                //start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+                /*Loop through all table rows (except the
+                first, which contains table headers):*/
+                for (i = 1; i < (rows.length - 1); i++) {
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    /*check if the two rows should switch place,
+                    based on the direction, asc or desc:*/
+                    if (dir == "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            //if so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            //if so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    //Each time a switch is done, increase this count by 1:
+                    switchcount++;
+                } else {
+                    /*If no switching has been done AND the direction is "asc",
+                    set the direction to "desc" and run the while loop again.*/
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+
+
+        /* Search/filter function */
+        function filterTable(event) {
+            var filter = event.target.value.toUpperCase();
+            var rows = document.querySelector("#le-Table-1 tbody").rows;
+
+            for (var i = 0; i < rows.length; i++) {
+                var firstCol = rows[i].cells[0].textContent.toUpperCase();
+                var secondCol = rows[i].cells[1].textContent.toUpperCase();
+                var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+                var sixthCol = rows[i].cells[5].textContent.toUpperCase();
+                if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1 ||
+                    sixthCol
+                    .indexOf(filter) > -1) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+        document.querySelector('#le-Input-1').addEventListener('keyup', filterTable, false);
+
+        function content(elem) {}
+
+
+        /* checkbox filter */
+        function filter_type(box) {
+            var cbs = document.getElementsByTagName('input');
+            var all_checked_types = [];
+
+            for (var i = 0; i < cbs.length; i++) {
+                if (cbs[i].type == "checkbox") {
+                    if (cbs[i].name.match(/^filter/)) {
+                        if (cbs[i].checked) {
+                            all_checked_types.push(cbs[i].value);
+                        }
+                    }
+                }
+            }
+
+            if (all_checked_types.length > 0) {
+                $('#le-Table-1 tr').each(function (i, row) {
+                    var $tds = $(this).find('td')
+                    if ($tds.length) {
+                        var type = $tds[0].innerText;
+                        console.log(type)
+                        if (!(type && all_checked_types.indexOf(type) >= 0)) {
+                            $(this).hide();
+                        } else {
+                            $(this).show();
+                        }
+                    }
+                });
+
+            } else {
+                $('#le-Table-1 tr').each(function (i, row) {
+                    var $tds = $(this).find('td'),
+                        type = $tds.eq(0).text();
+                    $(this).show();
+                });
+            }
+            return true;
+        }
+
+        /* checkbox filter */
+        function filter_type_Total(box) {
+            var cbs = document.getElementsByTagName('input');
+            var all_checked_types = [];
+
+            for (var i = 1; i < cbs.length; i++) {
+                if (cbs[i].type == "checkbox") {
+                    if (cbs[i].name.match(/^filter/)) {
+                        cbs[i].checked = box.checked;
+
+                    }
+                }
+            }
+
+            if (all_checked_types.length > 0) {
+                $('#le-Table-1 tr').each(function (i, row) {
+                    var $tds = $(this).find('td')
+                    if ($tds.length) {
+                        var type = $tds[0].innerText;
+                        console.log(type)
+                        if (!(type && all_checked_types.indexOf(type) >= 0)) {
+                            $(this).hide();
+                        } else {
+                            $(this).show();
+                        }
+                    }
+                });
+
+            } else {
+                $('#le-Table-1 tr').each(function (i, row) {
+                    var $tds = $(this).find('td'),
+                        type = $tds.eq(0).text();
+                    $(this).show();
+                });
+            }
+            return true;
+        }
+
+        /* clickable row */
+        jQuery(document).ready(function ($) {
+            $(".clickable-row").click(function () {
+                window.location = $(this).data("href");
+            });
+        });
+    </script>
 </body>
 
 </html>

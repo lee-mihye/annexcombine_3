@@ -402,8 +402,73 @@ button.main:hover .button-text {color: #000;}
 
 /************ service_Intro.html ************/
 .service_Intro_wrap .service_Intro_main .section_area{padding: 60px 0 0;}
+.service_Intro_wrap .service_Intro_main .section_area .section_title{padding-bottom: 0;}
 .service_Intro_wrap .section_listbox>.icon_area{box-shadow: 3px 3px 10px 1px rgb(0, 0, 0, 0.1);}
 .service_Intro_main .section_area .section_listbox img{width: 100%;}
+
+
+
+
+/* 97개 플랫폼 */
+/* 체크박스 테이블 */
+#Checkbox{margin:0 auto 30px;}
+#Checkbox tr{display:flex; flex-flow:row wrap; justify-content:center;}
+#Checkbox td{font-size: 18px; padding: 16px;}
+/* 체크박스 커스텀 */
+input[type="checkbox"] {display:none;}
+input[type="checkbox"] + label span {
+  display:inline-block;
+  width:22px;
+  height:20px;
+  margin:-2px 3px 0 0;
+  vertical-align:middle;
+  background:url(../images/check_sheet.png) left top no-repeat;
+  cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+  background:url(../images/check_sheet.png) -22px top no-repeat;
+}
+
+/* 검색창 */
+.search_box{text-align: right;}
+#le-Input-1 {
+  background-image: url('../images/search.png');
+  background-position: 10px 8px;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  font-size: 15px;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+/* 쇼핑몰리스트 전체 테이블 */
+#le-Table-1 {border-spacing: 0; width: 100%; border-bottom: 1px solid #ddd;text-align: center;}
+#le-Table-1 th, #le-Table-1 td { padding: 16px;}
+
+/*테이블 제목줄 .header*/
+#le-Table-1 .header {background-color: #f2f2f2;}
+
+#le-Table-1 .header th{border-right: 1px solid #ddd;border-top: 2px solid #ddd;border-bottom: 2px solid #ddd;cursor: pointer;}
+#le-Table-1 .header th:last-child{border-right: none;}
+#le-Table-1 tr:hover {background-color: #f9f9f9;cursor: pointer;}
+#le-Table-1 th:hover {background-color: #e8e8e8;}
+
+
+
+
+/* 쇼핑몰리스트 Rows*/
+
+.clickable-row {background-color: white;}
+.clickable-row td {border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;}
+.clickable-row td:last-child {border-right: none;}
+
+/* 쇼핑몰 로고이미지 */
+.clickable-row td img{width: 120px; max-width: 100%;}
+
+
+
+
 
 /* 서비스이용절차 */
 .service_process_item {
