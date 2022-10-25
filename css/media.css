@@ -238,7 +238,7 @@
     #header .gnb_ham {width: 100%;}
 
     /* 견적문의박스 */
-    #header .gnb_ham .gnb2 .estimate_box {height: 45px; line-height: 45px; margin-bottom: 10px; font-size: 5.2vw;}
+    #header .gnb_ham .gnb2 .estimate_box {height: 50px; line-height: 50px; margin-bottom: 10px; font-size: 5.2vw;}
     #header.open .gnb_ham {font-size: 17px;}
 
     /* 햄버거 메뉴안의 GNB */
@@ -264,7 +264,7 @@
     }
     #header .gnb_ham .gnb2 .sub_cate_title.company { grid-template-rows: 40px 40px;}
     #header .gnb_ham .gnb2 .sub_cate_title.etc {padding:15px 0 0;}
-    .categoty{padding: 15px 0;}
+    .categoty{padding: 17px 0;}
  
 
     
@@ -334,7 +334,22 @@
 
 
 
-    /*3. 아넥스컴바인스토리 */
+
+    /* 3. 리뷰슬라이드섹션 */
+    #reviewSlideSection{padding: 15% 0;}
+    #reviewSlideSection .sectionTitle {margin-bottom: 6vw; font-size: 8.9VW;}
+    #reviewSlideSection #reviewSlider{height: 310px;}
+    #reviewSlideSection #reviewSlider .sliderWrap {height: 305px;}
+    #reviewSlideSection #reviewSlider .sliderWrap .item {
+        height: 246px;
+      }
+
+    #reviewSlideSection #reviewSlider .sliderWrap .item .textBox {margin-top: 0;font-size: 18px;}
+
+
+
+
+    /*4. 아넥스컴바인스토리 */
     #introduce_section {background-color: #F8FAFF;}
     /* #introduce_section .section_area{padding: 10% 0 20%;} */
     .section_listbox p {font-size: 4.4vw;margin-top: 3%; letter-spacing: -0.99px;}
@@ -343,7 +358,7 @@
 
 
 
-    /* 4. 서비스안내 */
+    /* 5. 서비스안내 */
     #service_section .section_listbox>.icon_area{width:100%;}
     #service_section .section_listbox .icon_wrap{margin-bottom:4%;}
     #service_section .section_listbox .icon_area:last-child .icon_wrap:last-child {margin-bottom: 0;}
@@ -459,9 +474,7 @@
     .review_main .review_section1 img{padding: 15% 0 0;}
     .review_main .review_section1 .txt{padding: 0 0 15%; color:#00BAB3;font-size: 7.5vw;}
 
-    /* 리뷰슬라이드섹션 */
-    #reviewSlideSection{padding: 15% 0;}
-    #reviewSlideSection .sectionTitle {margin-bottom: 6vw; font-size: 8.9VW;}
+
 
 
 
@@ -485,8 +498,14 @@
 
     .event_wrap .section_area{padding:15% 0;}
     /************ event_article.html ************/
-    .section_area.event_article{padding: 2% 0;}
+    .section_area.event_article{padding: 2% 0 15%;}
     .article_date{font-size: 4.4vw;}
+    .list_btn{
+        width: 30vw;
+        height: 40px;
+        line-height: 40px;
+        font-size: 4.5vw;
+        margin-top: 10%;}
 
 
 
