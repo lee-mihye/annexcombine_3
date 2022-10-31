@@ -511,7 +511,7 @@ input[type="checkbox"]:checked + label span {
   align-items: center;
   justify-content: space-between;
   text-align: left;
-  padding: 8%;
+  padding: 1.875rem 0;
 }
 
 @media screen and (min-width:768.02px) {
@@ -563,12 +563,14 @@ input[type="checkbox"]:checked + label span {
   }
 }
 @media screen and (max-width:768px) {
-  .service_process_item{display: block; text-align: center;}
+  .service_process_item{display: block; text-align: center;padding: 8%;}
   .service_process_item .txt_box {
     width: 50%;
     max-width: 600px
   }
-  
+  .service_process_item .img_box img {
+    max-width:100%;
+  }
   .service_process_item .img_box, .service_process_item .txt_box{width: 100%;}
   
 }
@@ -577,7 +579,7 @@ input[type="checkbox"]:checked + label span {
 .service_process_item .img_box img {
   margin: 0 auto;
   width: 100%;
-  max-width:100%;
+  max-width: 360px;
 }
 .service_process_item .txt_box .number {
   letter-spacing: -0.045em;
