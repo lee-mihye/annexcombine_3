@@ -37,9 +37,9 @@ $(function () { /////// jQB ///////////////////////
 
 
 
-    // estimate.html 구글설문지로 페이지 이동
+    // estimate.html 설문지로 페이지 이동
     $(".estimate_wrap .estimate_box").click(function () {
-        window.open("https://docs.google.com/forms/d/e/1FAIpQLSfqKdtT-Z3eGN7dADLh8Ix-r0puFESAIGITYALW4YvMSY6V1g/viewform?usp=sf_link");
+        window.open("https://vlvxnkok05t.typeform.com/to/ZHYHQD3p");
     });
 
 

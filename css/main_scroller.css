@@ -13,6 +13,7 @@
 
 .banner-slider {
   position: relative;
+  overflow: hidden;
 }
 
 .banner-slider:before,

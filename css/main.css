@@ -225,9 +225,42 @@ button.main:hover .button-text {color: #000;}
 
 
 
-/* 3. 리뷰 슬라이드*/
+/* 3. 리뷰 슬라이드 섹션*/
 #reviewSlideSection {position: relative; padding: 100px 0;background-color: #fff;}
 #reviewSlideSection .sectionTitle {margin-bottom: 50px;text-align: center; font-size: 42px; font-weight: bold;}
+
+/* 파트너 이미지 첨가 후기 */
+#reviewSlideSection .review_imageBox{max-width: 1280px; margin: 0 auto 50px; width:90%;}
+.review_imageBox .section_listbox>.icon_area{width: 608px; }
+.review_imageBox .icon_box {position: relative;}
+.review_imageBox .icon_box .company{
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  background: #00bab3;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.8em;
+  font-weight: bold;}
+.review_imageBox .icon_box img{width: 100%;  max-width: 100%;display:block;object-fit: cover;}
+
+#reviewSlideSection .review_imageBox .item{background-color: #F9FAFB;padding: 20px; width:auto; height: 200px; margin-right: 0;}
+#reviewSlideSection .review_imageBox .item .score{font-size:20px;}
+#reviewSlideSection .review_imageBox .item .score {margin-bottom: 0.2em}
+
+
+@media only screen and (max-width:730px) {
+  /* 모바일사이즈에서 BR태그 빼기 */
+  .br_block_mo {display: none !important;}
+
+  #reviewSlideSection .review_imageBox .item{height: auto;}
+  /* #reviewSlideSection .review_imageBox .item .textBox {font-size: 5vw;} */
+}
+
+
+
+/* 리뷰 슬라이드 */
 #reviewSlideSection #reviewSlider { width: 100%; overflow: hidden;height: 350px;position: relative;}
 #reviewSlideSection #reviewSlider .sliderWrap {
   padding: 0;
@@ -242,7 +275,7 @@ button.main:hover .button-text {color: #000;}
   will-change: transform;
   height: 343px;
 }
-#reviewSlideSection #reviewSlider .sliderWrap .item {
+#reviewSlideSection .item {
   padding: 30px;
   width: 300px;
   height: 248px;
@@ -255,19 +288,19 @@ button.main:hover .button-text {color: #000;}
   box-shadow: 1px 2px 3px rgba(8, 9, 45, 0.08);
 }
 /* 리뷰작성자 */
-#reviewSlideSection #reviewSlider .sliderWrap .item .title{
+#reviewSlideSection .item .title{
   font-size: 15px;
   color: #1864ab;
   text-align: center;
 }
-#reviewSlideSection #reviewSlider .sliderWrap .item .textBox {
+#reviewSlideSection .item .textBox {
   margin-top: 8px;
   flex-grow: 1;
   font-size: 19px;
 }
 
 /* 스코어 별점 */
-#reviewSlideSection #reviewSlider .sliderWrap .item .score {display: flex;align-items: center;margin-bottom: 1em}
+#reviewSlideSection .item .score {display: flex;align-items: center;margin-bottom: 1em}
 .star_score {--percent: calc(var(--rating)/5*100%);display: inline-block;font-size: 1.4em;font-family: Times;line-height: 1;padding-right: 8px;}
 .star_score:before {
     content: "★★★★★";
@@ -278,8 +311,8 @@ button.main:hover .button-text {color: #000;}
 }
 .score .number_score {font-size: 1.1em;}
 
-#reviewSlideSection #reviewSlider .sliderWrap .item .imgWrap img.four {margin-left: -20px;}
-#reviewSlideSection #reviewSlider .sliderWrap .item .imgWrap img.three {margin-left: -40px;}
+#reviewSlideSection .item .imgWrap img.four {margin-left: -20px;}
+#reviewSlideSection .item .imgWrap img.three {margin-left: -40px;}
 
 
 
@@ -444,7 +477,8 @@ input[type="checkbox"]:checked + label span {
 
 /* 쇼핑몰리스트 전체 테이블 */
 #le-Table-1 {border-spacing: 0; width: 100%; border-bottom: 1px solid #ddd;text-align: center;}
-#le-Table-1 th, #le-Table-1 td { padding: 16px;}
+#le-Table-1 th{ padding: 16px;}
+#le-Table-1 td { padding: 13px;}
 
 /*테이블 제목줄 .header*/
 #le-Table-1 .header {background-color: #f2f2f2;}
@@ -464,7 +498,7 @@ input[type="checkbox"]:checked + label span {
 .clickable-row td:last-child {border-right: none;}
 
 /* 쇼핑몰 로고이미지 */
-.clickable-row td img{width: 120px; max-width: 100%;}
+.clickable-row td img{width: 120px; display:block; margin: 0 auto; max-width: 100%;}
 
 
 
@@ -477,7 +511,7 @@ input[type="checkbox"]:checked + label span {
   align-items: center;
   justify-content: space-between;
   text-align: left;
-  padding: 1.875rem 0
+  padding: 8%;
 }
 
 @media screen and (min-width:768.02px) {
@@ -541,9 +575,9 @@ input[type="checkbox"]:checked + label span {
 
 
 .service_process_item .img_box img {
-  max-width: 360px;
   margin: 0 auto;
-  width: 100%
+  width: 100%;
+  max-width:100%;
 }
 .service_process_item .txt_box .number {
   letter-spacing: -0.045em;
@@ -589,8 +623,14 @@ input[type="checkbox"]:checked + label span {
 /************ brand.html ************/
 .brand_wrap .brand_main .section_area{padding: 60px 0 100px;}
 .section_listbox.brand_logo>.icon_area{width: 250px;}
-.section_listbox.brand_logo>.icon_area:hover{box-shadow: 0 10px 30px 7px rgba(204, 204, 204, 0.4);}
-.section_listbox.brand_logo .icon_box img{width: 100%;}
+.section_listbox.brand_logo .icon_box img{width: 100%; max-width: 100%;}
+
+@media only screen and (max-width:625px) {
+  .section_listbox.brand_logo>.icon_area{width: 46%; }
+  
+  
+}
+
 
 
 

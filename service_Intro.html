@@ -68,11 +68,11 @@
                 <nav>
                     <ul class="gnb">
                         <li>
-                            <a href="#" onclick="return false;" class="on">회사소개</a>
+                            <a href="#" onclick="return false;">회사소개</a>
                             <ul class="sub_menu">
                                 <li><a href="introduce.html">아넥스컴바인</a></li>
-                                <li><a href="service_Intro.html">서비스소개</a></li>
-                                <li><a href="brand.html">브랜드</a></li>
+                                <li><a href="service_Intro.html">자동 연동 플랫폼</a></li>
+                                <li><a href="brand.html">고객사</a></li>
                             </ul>
                         </li>
                         <li><a href="review.html">고객후기</a></li>
@@ -115,8 +115,8 @@
                         <div class="cate_title">회사소개</div>
                         <ul class="sub_cate_title company">
                             <li><a href="introduce.html">아넥스컴바인</a></li>
-                            <li><a href="service_Intro.html">서비스소개</a></li>
-                            <li><a href="brand.html">브랜드</a></li>
+                            <li><a href="service_Intro.html">자동 연동 플랫폼</a></li>
+                            <li><a href="brand.html">고객사</a></li>
                         </ul>
                     </li>
 
@@ -157,7 +157,7 @@
                 <!-- 타이틀 텍스트 -->
                 <div class="section_title">
                     <div class="h3_box">
-                        <h3>서비스소개</h3>
+                        <h3>자동 연동 플랫폼</h3>
                     </div>
                     <h2>97개 플랫폼과 자동 주문수집 오토 시스템<br class="br_block"></h2>
                 </div>
@@ -177,29 +177,22 @@
                                 <label for="openmarket"><span></span>오픈마켓</label> 
                             </td>
                             <td>
-                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="social" value="소셜" checked />
-                                <label for="social"><span></span>소셜</label> 
+                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="specialty" value="전문몰" checked />
+                                <label for="specialty"><span></span>전문몰</label> 
                             </td>
                             <td>
                                 <input type='checkbox' onclick='return filter_type(this);' name='filter' id="general" value="종합몰" checked />
                                 <label for="general"><span></span>종합몰</label> 
                             </td>
                             <td>
-                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="specialty" value="전문몰" checked />
-                                <label for="specialty"><span></span>전문몰</label> 
-                            </td>
-                            <td>
                                 <input type='checkbox' onclick='return filter_type(this);' name='filter' id="HomeShopping" value="홈쇼핑" checked />
                                 <label for="HomeShopping"><span></span>홈쇼핑</label> 
                             </td>
                             <td>
-                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="welfare" value="복지몰" checked />
-                                <label for="welfare"><span></span>복지몰</label> 
+                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="commerce" value="커머스" checked />
+                                <label for="commerce"><span></span>커머스</label> 
                             </td>
-                            <td>
-                                <input type='checkbox' onclick='return filter_type(this);' name='filter' id="overseas" value="해외쇼핑몰" checked />
-                                <label for="overseas"><span></span>해외쇼핑몰</label> 
-                            </td>
+
                         </tr>
                     </table>
                     <!--  Table -->
@@ -219,197 +212,1023 @@
                                 <th onclick="sortTable(0)">형태</th>
                                 <th onclick="sortTable(1)">쇼핑몰</th>
                                 <th onclick="sortTable(2)">쇼핑몰명</th>
-                                <th onclick="sortTable(3)">상품등록</th>
-                                <th onclick="sortTable(4)">상품수정</th>
-                                <th onclick="sortTable(5)">상품품절</th>
-                                <th onclick="sortTable(6)">주문수집</th>
-                                <th onclick="sortTable(7)">송장전송</th>
-                                <th onclick="sortTable(8)">고객문의</th>
-                                <th onclick="sortTable(9)">정산수집</th>
+                                <th onclick="sortTable(3)">신규등록</th>
+                                <th onclick="sortTable(4)">품질처리</th>
+                                <th onclick="sortTable(5)">발주/송장</th>
+                                <th onclick="sortTable(6)">부분배송</th>
+                                <th onclick="sortTable(7)">교환/반품</th>
+                                <th onclick="sortTable(8)">C/S 링크</th>
+                                <th onclick="sortTable(9)">게시판연동</th>
                             </tr>
                         </thead>
                         <!--  Table Body / Rows -->
                         <tbody>
                             <tr class='clickable-row' data-href='#link'>
                                 <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/coupang.png" alt="쿠팡"></td>
+                                <td>쿠팡</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
                                 <td><img src="images/mall_logo/smartstore.png" alt="스마트스토어"></td>
                                 <td>스마트스토어</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
                             </tr>
+
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/gmarket.png" alt="지마켓"></td>
+                                <td>지마켓</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+
                             <tr class='clickable-row' data-href='#link'>
                                 <td>오픈마켓</td>
                                 <td><img src="images/mall_logo/auction.png" alt="옥션"></td>
                                 <td>옥션</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
                                 <td>오픈마켓</td>
                                 <td><img src="images/mall_logo/11st.png" alt="11번가"></td>
                                 <td>11번가</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
                             </tr>
-                            <tr class='clickable-row' data-href='#link'>
-                                <td>오픈마켓</td>
-                                <td><img src="images/mall_logo/gmarket.png" alt="지마켓"></td>
-                                <td>지마켓</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
-                            </tr>
+                            
                             <tr class='clickable-row' data-href='#link'>
                                 <td>오픈마켓</td>
                                 <td><img src="images/mall_logo/interpark.png" alt="인터파크"></td>
                                 <td>인터파크</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/tmon.png" alt="티몬"></td>
+                                <td>티몬</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/wmf.png" alt="위메프"></td>
+                                <td>위메프</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
+                            </tr>        
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/lotteimall.png" alt="롯데i몰"></td>
+                                <td>롯데i몰</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>O</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
                                 <td>오픈마켓</td>
-                                <td><img src="images/mall_logo/coupang.png" alt="쿠팡"></td>
-                                <td>쿠팡</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td><img src="images/mall_logo/lotteon.png" alt="롯데ON"></td>
+                                <td>롯데ON</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>-</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>-</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>O</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
-                                <td>소셜</td>
-                                <td><img src="images/mall_logo/tmon.png" alt="티몬"></td>
-                                <td>티몬</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/qoo10_s.png" alt="큐텐(싱가폴)"></td>
+                                <td>큐텐(싱가폴)</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>-</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
-                                <td>홈쇼핑</td>
-                                <td><img src="images/mall_logo/cjonestyle.png" alt="CJ온스타일"></td>
-                                <td>CJ온스타일</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/qoo10_j.png" alt="큐텐(일본)"></td>
+                                <td>큐텐(일본)</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>-</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
-                                <td>홈쇼핑</td>
-                                <td><img src="images/mall_logo/hmall.png" alt="현대H몰"></td>
-                                <td>현대H몰</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
-                            </tr>
-                            <tr class='clickable-row' data-href='#link'>
-                                <td>홈쇼핑</td>
-                                <td><img src="images/mall_logo/nshomeshop.png" alt="NS홈쇼핑"></td>
-                                <td>NS홈쇼핑</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td>오픈마켓</td>
+                                <td><img src="images/mall_logo/kakao.png" alt="카카오"></td>
+                                <td>카카오</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
                                 <td>전문몰</td>
-                                <td><img src="images/mall_logo/brandi.png" alt="브랜디"></td>
-                                <td>브랜디</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td><img src="images/mall_logo/cafe24.png" alt="카페24"></td>
+                                <td>카페24</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/imweb.png" alt="아임웹"></td>
+                                <td>아임웹</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/makeshop.png" alt="메이크샵"></td>
+                                <td>메이크샵</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/godo.png" alt="고도몰"></td>
+                                <td>고도몰</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/mbx.png" alt="미미박스"></td>
+                                <td>미미박스</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/styleshare.png" alt="스타일쉐어"></td>
+                                <td>스타일쉐어</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/istyle24.png" alt="아이스타일24"></td>
+                                <td>아이스타일24</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
                                 <td>전문몰</td>
                                 <td><img src="images/mall_logo/musinsa.png" alt="무신사"></td>
                                 <td>무신사</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/10x10.png" alt="텐바이텐"></td>
+                                <td>텐바이텐</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/babosarang.png" alt="바보사랑"></td>
+                                <td>바보사랑</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/gabangpop.png" alt="가방팝"></td>
+                                <td>가방팝</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/hottracks.png" alt="핫트랙스"></td>
+                                <td>핫트랙스</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/0to7.png" alt="제로투세븐"></td>
+                                <td>제로투세븐</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/brandi.png" alt="브랜디"></td>
+                                <td>브랜디</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/wconcept.png" alt="W컨셉"></td>
+                                <td>W컨셉</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/player.png" alt="플레이어"></td>
+                                <td>플레이어</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/1300k.png" alt="1300케이"></td>
+                                <td>1300케이</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/ogage.png" alt="오가게"></td>
+                                <td>오가게</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/ezwel.png" alt="이지웰"></td>
+                                <td>이지웰</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
                                 <td>전문몰</td>
                                 <td><img src="images/mall_logo/halfclub.png" alt="하프클럽"></td>
                                 <td>하프클럽</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/womanstalk.png" alt="우먼스톡"></td>
+                                <td>우먼스톡</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/wizwid.png" alt="위즈위드"></td>
+                                <td>위즈위드</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/snsform.png" alt="SNS폼"></td>
+                                <td>SNS폼</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>-</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/codibook.png" alt="코디북"></td>
+                                <td>코디북</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/lookpin.png" alt="룩핀"></td>
+                                <td>룩핀</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/29cm.png" alt="29CM"></td>
+                                <td>29CM</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/skinrx.png" alt="스킨RX"></td>
+                                <td>스킨RX</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/lfmall.png" alt="LF몰"></td>
+                                <td>LF몰</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/fashionplus.png" alt="패션플러스"></td>
+                                <td>패션플러스</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/seoulstore.png" alt="서울스토어"></td>
+                                <td>서울스토어</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/blogpay.png" alt="블로그페이"></td>
+                                <td>블로그페이</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/globy.png" alt="메이크글로비"></td>
+                                <td>메이크글로비</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/zigzag.png" alt="지그재그"></td>
+                                <td>지그재그</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/brich.png" alt="브리치"></td>
+                                <td>브리치</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/ably.png" alt="에이블리"></td>
+                                <td>에이블리</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/funshop.png" alt="펀샵"></td>
+                                <td>펀샵</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/dongwonmall.png" alt="동원몰"></td>
+                                <td>동원몰</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/idus.png" alt="아이디어스"></td>
+                                <td>아이디어스</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/todayhouse.png" alt="오늘의 집"></td>
+                                <td>오늘의 집</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/hiver.png" alt="하이버"></td>
+                                <td>하이버</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/mami.png" alt="마미"></td>
+                                <td>마미</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/bananab2b.png" alt="바나나B2B"></td>
+                                <td>바나나B2B</td>
+                                <td title=신규등록>-</td>
+                                <td title=품질처리>-</td>
+                                <td title=자동발주/송장>-</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>-</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/srook.png" alt="스룩페이"></td>
+                                <td>스룩페이</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/benepia.png" alt="베네피아"></td>
+                                <td>베네피아</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/eql.png" alt="한섬EQL"></td>
+                                <td>한섬EQL</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/queenit.png" alt="퀸잇"></td>
+                                <td>퀸잇</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>전문몰</td>
+                                <td><img src="images/mall_logo/hago.png" alt="하고"></td>
+                                <td>하고</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
                                 <td>종합몰</td>
-                                <td><img src="images/mall_logo/ssg.png" alt="SSG"></td>
-                                <td>SSG</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td><img src="images/mall_logo/npay.png" alt="네이버페이"></td>
+                                <td>네이버페이</td>
+                                <td title=신규등록>-</td>
+                                <td title=품질처리>-</td>
+                                <td title=자동발주/송장>-</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>-</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
                             </tr>
                             <tr class='clickable-row' data-href='#link'>
-                                <td>해외쇼핑몰</td>
-                                <td><img src="images/mall_logo/ebay.png" alt="ebay"></td>
-                                <td>ebay</td>
-                                <td title=상품등록>O</td>
-                                <td title=상품수정>O</td>
-                                <td title=상품품절>X</td>
-                                <td title=주문수집>O</td>
-                                <td title=송장전송>O</td>
-                                <td title=고객문의>O</td>
-                                <td title=정산수집>O</td>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/emart.png" alt="이마트"></td>
+                                <td>이마트</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
                             </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/akmall.png" alt="AK몰"></td>
+                                <td>AK몰</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/daiso.png" alt="다이소"></td>
+                                <td>다이소</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/homeplus.png" alt="홈플러스"></td>
+                                <td>홈플러스</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>-</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>-</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/domeggook.png" alt="도매꾹"></td>
+                                <td>도매꾹</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/eland.png" alt="이랜드몰"></td>
+                                <td>이랜드몰</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/lottemart.png" alt="롯데마트"></td>
+                                <td>롯데마트</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/smelchi.png" alt="멸치쇼핑"></td>
+                                <td>멸치쇼핑</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/nhmarket.png" alt="NH마켓"></td>
+                                <td>NH마켓</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/gsretail.png" alt="GS리테일"></td>
+                                <td>GS리테일</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/sellerhub.png" alt="셀러허브"></td>
+                                <td>셀러허브</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>종합몰</td>
+                                <td><img src="images/mall_logo/nhmall.png" alt="농협몰"></td>
+                                <td>농협몰</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/hmall.png" alt="현대H몰"></td>
+                                <td>현대H몰</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/cjonestyle.png" alt="CJ온스타일"></td>
+                                <td>CJ온스타일</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>O</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/gsshop.png" alt="GS숍"></td>
+                                <td>GS숍</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>O</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/hnsmall.png" alt="홈앤쇼핑"></td>
+                                <td>홈앤쇼핑</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/nshomeshop.png" alt="NS홈쇼핑"></td>
+                                <td>NS홈쇼핑</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/shoppingnt.png" alt="쇼핑앤티"></td>
+                                <td>쇼핑앤티</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/ssg.png" alt="신세계"></td>
+                                <td>신세계</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>O</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>홈쇼핑</td>
+                                <td><img src="images/mall_logo/gongyoungshop.png" alt="신세계"></td>
+                                <td>공용홈쇼핑</td>
+                                <td title=신규등록>-</td>
+                                <td title=품질처리>-</td>
+                                <td title=자동발주/송장>-</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>-</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>커머스</td>
+                                <td><img src="images/mall_logo/grip.png" alt="그립"></td>
+                                <td>그립</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+                            <tr class='clickable-row' data-href='#link'>
+                                <td>커머스</td>
+                                <td><img src="images/mall_logo/dholic.png" alt="디홀릭커머스"></td>
+                                <td>디홀릭커머스</td>
+                                <td title=신규등록>O</td>
+                                <td title=품질처리>O</td>
+                                <td title=자동발주/송장>O</td>
+                                <td title=부분배송>-</td>
+                                <td title=교환/반품>O</td>
+                                <td title=C/S링크>-</td>
+                                <td title=게시판연동>-</td>
+                            </tr>
+
+                            
+                         
+                            
                         </tbody>
                     </table>
                 </div>

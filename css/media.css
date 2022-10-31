@@ -317,7 +317,7 @@
     .section_title {text-align: center;padding-bottom: 5%;}
     .section_title h3 {font-size: 5.5vw; line-height: 1;}
     .section_title h3::before{top:0;}
-    .section_title h2 {font-size: 8.3vw; line-height: 11vw; margin: 4vw 0;}
+    .section_title h2 {font-size: 8vw; line-height: 11vw; margin: 4vw 0;}
     .section_listbox h4 {font-size: 6vw;}
     #introduce_section .section_listbox .icon_wrap{padding: 8%;}
     /* .section_listbox .icon_wrap {padding: 10%;} */
@@ -360,13 +360,19 @@
     /* 3. 리뷰슬라이드섹션 */
     #reviewSlideSection{padding: 15% 0;}
     #reviewSlideSection .sectionTitle {margin-bottom: 6vw; font-size: 8.9VW;}
+
+    /* 파트너 이미지 첨가 후기 */
+    .review_imageBox .icon_box .company{padding: 4px 12px;font-size: 4vw;}
+    #reviewSlideSection .review_imageBox .item .score{font-size:5vw;}
+    /*후기내용 글씨크기 공통*/
+    #reviewSlideSection .item .textBox{font-size: 4.4vw;}
+
+    /* 리뷰 슬라이드 */
     #reviewSlideSection #reviewSlider{height: 310px;}
     #reviewSlideSection #reviewSlider .sliderWrap {height: 305px;}
-    #reviewSlideSection #reviewSlider .sliderWrap .item {
-        height: 246px;
-      }
+    #reviewSlideSection #reviewSlider .sliderWrap .item {height: 246px;}
 
-    #reviewSlideSection #reviewSlider .sliderWrap .item .textBox {margin-top: 0;font-size: 18px;}
+
 
 
 
@@ -429,8 +435,9 @@
     /* 검색창 */
     .search_box{text-align: center;}
 
-
-
+    /* 서비스이용절차 */
+    .service_process_item .txt_box .h3{font-size: 6vw; margin: 15px 0;}
+    .service_process_item .txt_box .comment{font-size: 4.4vw; }
 
 
    /************ center.html ************/ 
