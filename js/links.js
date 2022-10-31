@@ -53,6 +53,11 @@ $(function () { /////// jQB ///////////////////////
     // 로고이미지 클릭하면 index.html로 이동
     $(".event_wrap .logo a").click(function (e) {
         e.preventDefault();
+       location.href = "./index.html";
+    }); ////////// click //////////////
+    // 로고이미지 클릭하면 index.html로 이동
+    $(".event_article_wrap .logo a").click(function (e) {
+        e.preventDefault();
        location.href = "../index.html";
     }); ////////// click //////////////
 
