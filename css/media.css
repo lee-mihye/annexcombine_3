@@ -124,6 +124,27 @@
     .cate_title{font-weight: bold; color: #8B95A1;}
 
 
+
+
+
+
+    /* 서브페이지 공통 */
+    .introduce_wrap,
+    .service_Intro_wrap, 
+    .brand_wrap,
+    .center_wrap,
+    .service_wrap,
+    .consultant_wrap,
+    .estimate_wrap,
+    .review_wrap,
+    .userguide_wrap,
+    .event_wrap
+    {margin-top:60px;}
+    
+
+
+
+
     /* 체크리스트 이미지 */
     .checklist_pc{display:none;}
     .checklist_mo{display:block;}
@@ -161,16 +182,7 @@
     .foot_logo {width: 200px;}
 
 
-    /* 서브페이지 공통 */
-    .introduce_wrap,
-    .service_Intro_wrap, 
-    .brand_wrap,
-    .center_wrap,
-    .service_wrap,
-    .estimate_wrap,
-    .review_wrap,
-    .event_wrap
-    {margin-top:60px;}
+
 
 
     /************* introduce.html.html *************/
@@ -235,6 +247,12 @@
     #le-Table-1 {font-size: 2vw;}
     #le-Table-1 th, #le-Table-1 td { padding: 0.5vw;}
 }
+
+
+
+
+
+
 
 
 
@@ -317,11 +335,13 @@
     .section_title {text-align: center;padding-bottom: 5%;}
     .section_title h3 {font-size: 5.5vw; line-height: 1;}
     .section_title h3::before{top:0;}
-    .section_title h2 {font-size: 8vw; line-height: 11vw; margin: 4vw 0;}
+    .section_title h2 {font-size: 7.9vw; line-height: 11vw; margin: 4vw 0;}
     .section_listbox h4 {font-size: 6vw;}
     #introduce_section .section_listbox .icon_wrap{padding: 8%;}
     /* .section_listbox .icon_wrap {padding: 10%;} */
 
+    /* consultant.html,userguide.html 에 사용  */
+    .font_34{font-size: 6.2vw;;}
 
 
 
@@ -413,7 +433,8 @@
 
     #service_section .icon_txt{padding:8%;}
 
-
+    /* 서브페이지 제목 아래 p태그 */
+    .sub_wrap .section_area .section_title p{font-size: 4.4vw; padding: 4vw 0;}
 
 
     /************ introduce.html ************/
@@ -491,7 +512,7 @@
    .section_title h4{font-size: 5vw; line-height: 1.3; margin-top: 3vw;}
 
     /* 섹션영역1 [컨설팅제시] */
-   #consultant_section .title{font-size: 8.3vw;line-height: 1.2; }
+   #consultant_section .title{font-size: 7vw;line-height: 1.2; }
    .section_title h5{font-size: 4.3vw; margin-top:3vw;}
 
 
@@ -519,6 +540,12 @@
 
 
 
+    /*********** userguide.html ***********/
+    #userguide_main .section_title h2{margin: 4vw 0 0;}
+    #guide_section .guide_area li{font-size: 5vw; padding:2.5vw;}
+    #guide_section .guide_area li.flex_non div{font-size: 4.8vw;} 
+
+
 
 
     /************ estimate.html ************/ 
@@ -536,11 +563,15 @@
 
 
 
-
+    /************ event.html ************/
     .event_wrap .section_area{padding:15% 0;}
+    .event_title h2{font-size: 4.4vw;}
+    .event_title p{font-size: 3.4vw;}
     /************ event_article.html ************/
     .section_area.event_article{padding: 2% 0 15%;}
-    .article_date{font-size: 4.4vw;}
+    .section_title.event_article h2{font-size: 5.5vw;line-height: 1; margin:0;}
+    .article_date{font-size: 3.4vw;}
+    
     .list_btn{
         width: 30vw;
         height: 40px;

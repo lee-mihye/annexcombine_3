@@ -207,7 +207,8 @@ button.main:hover .button-text {color: #000;}
 .wrap .section_title h3::before{
   display: none;
 }
-
+/* consultant.html,userguide.html 에 사용  */
+.font_34{font-size: 34px; font-weight: bold;}
 
 
 
@@ -363,9 +364,7 @@ button.main:hover .button-text {color: #000;}
   display: block;
 }
 #service_section .icon_txt{padding:30px;}
-#service_section .section_listbox h4{
 
-} 
 /*이미지에 호버하면 스케일 커지기*/
 #service_section .section_listbox>.icon_area:hover .icon_box img,  
 #service_section .section_listbox>.icon_area:focus .icon_box img{
@@ -407,13 +406,15 @@ button.main:hover .button-text {color: #000;}
 .brand_wrap, 
 .review_wrap,
 .service_wrap,
+.consultant_wrap,
 .estimate_wrap,
+.userguide_wrap,
 .event_wrap{margin-top:80px;}
 
-.introduce_wrap .section_area .section_title p,
-.service_wrap .section_area .section_title p,
-.brand_wrap .section_area .section_title p
-{font-size: 18.5px; padding: 20px;}
+
+
+/* 서브페이지 제목 아래 p태그 */
+.sub_wrap .section_area .section_title p{font-size: 18.5px; padding: 20px;}
 
 
 
@@ -640,7 +641,7 @@ input[type="checkbox"]:checked + label span {
 
 
 /************ center.html ************/
-.center_wrap .section_area{padding: 60px 0;}
+.center_wrap .section_area{padding: 60px 0 100px;}
 .map_wrap{display: flex; align-items: center;}
 .map_img{width:720px; margin-right: 40px;}
 .map_img img{width:100%;}
@@ -753,7 +754,6 @@ input[type="checkbox"]:checked + label span {
 #consultant_main .section_title h2{margin:20px 0 0;}
 
 /* 섹션영역1 [컨설팅제시] */
-#consultant_section .title{font-size: 32px; font-weight: bold;}
 #consultant_section .section_listbox .icon_wrap{border: 1px solid rgba(204, 204, 204, 0.4); padding:40px;}
 #consultant_section .section_listbox .icon_box {margin-bottom: 35px;}
 #consultant_section .section_listbox .icon_box img{width: 100%;}
@@ -852,14 +852,62 @@ input[type="checkbox"]:checked + label span {
 
 
 
+/************ userguide.html ************/
+/* 메인 */
+#userguide_main{ position: relative;}
+.userguide_main_img_area{height:47vh; }
+.userguide_wrap_bgimg{background: url("../images/userguide_main.jpg") no-repeat 50% 100%/cover; height: 100%;}
+.userguide_main_img_area img{width:100vw;}
+#userguide_main .section_area{position: absolute;top: 50%;left:50%; transform: translate(-50%,-50%);}
+
+#userguide_main .section_title{padding-bottom: 0;}
+#userguide_main .section_title h2{margin:20px 0 0;}
+
+
+
+
+/* 사용가이드 리스트 */
+#guide_section .guide_area {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(auto-fill,
+      minmax(260px,
+        1fr));
+  grid-auto-rows: 1fr;
+  gap: 16px;
+}
+#guide_section .guide_area li {
+  background-color: #00bab3;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+#guide_section .guide_area li:hover{background-color: rgba(0, 186, 179,0.8);}
+
+#guide_section .guide_area li.flex_non{flex-direction: column;} 
+#guide_section .guide_area li.flex_non div{font-size: 20px;} 
+
+#guide_section .section_title h3::before{
+  display: none;
+}
+
+
+
+
+
 
 /************ event.html ************/
 .event_wrap .section_area{padding:60px 0;}
 #event_section .section_listbox{font-size: 0;}
 #event_section .section_listbox .icon_wrap{border: 1px solid rgba(204, 204, 204, 0.4);}
-#event_section .section_listbox .icon_box {}
 #event_section .section_listbox .icon_box img{width: 100%;}
-#event_section .section_listbox>.icon_area{width:610px;margin:}
+#event_section .section_listbox>.icon_area{width:610px;}
 #event_section .section_listbox>.icon_area:hover {box-shadow: 0 10px 30px 7px rgba(204, 204, 204, 0.4);}
 .event_title{text-align:left; padding:15px;}
 .event_title h2{font-size: 20px;}
